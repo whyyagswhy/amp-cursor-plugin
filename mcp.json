@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "amp": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${PLUGIN_ROOT}/server/index.mjs"
+      ],
+      "cwd": "${PLUGIN_ROOT}",
+      "env": {
+        "AMP_CLIENT_ID": "${AMP_CLIENT_ID}",
+        "AMP_CLIENT_SECRET": "${AMP_CLIENT_SECRET}",
+        "AMP_API_BASE_URL": "${AMP_API_BASE_URL}"
+      }
+    }
+  }
+}
